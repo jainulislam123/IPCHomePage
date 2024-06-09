@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* font-family: "Poppins", sans-serif; */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: metropolis;
+}
+/***** utility *****/
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+a,
+li:hover {
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+}
+/***** End utility *****/
+
+body {
+  max-width: 1440px;
+  height: 100vh;
+  background: url("./Assets/background-image.png") bottom no-repeat;
+  margin: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/***** header *****/
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  padding: 12px 0;
+}
+
+/***** nav *****/
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding-top: 10px;
+}
+header nav ul li a {
+  color: black;
+}
+
+header .searchService ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header .searchService button {
+  background-color: #ed017f;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.menu {
+  position: absolute;
+  right: 17px;
+  top: -20px;
+  font-size: 1.5rem;
+  color: #ed017f;
+  cursor: pointer;
+  z-index: 114;
+}
+.menu .close {
+  display: none;
+}
+.menu .open {
+  /* display: none; */
+}
+
+/***** End nav *****/
+
+/***** Button  Section *****/
+main {
+  position: relative;
+}
+.carbutton ul,
+.Homebutton ul {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  width: 130px;
+  padding: 5px;
+  margin: auto;
+  border-radius: 22px;
+  box-shadow: 1px 1px 20px grey;
+  transform: translate(-50%, -50%);
+  top: 7%;
+  left: 50%;
+}
+.Homebutton ul {
+  width: 150px;
+  justify-content: center;
+  top: 27%;
+  right: -36%;
+  box-shadow: 10px 10px 50px grey;
+}
+/*****  end Button  Section *****/
+
+/***** Hero Section *****/
+
+.heroSection {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: auto;
+}
+.heroSection .TextContent {
+  padding-left: 105px;
+  position: relative;
+}
+.heroSection .heroImage {
+  width: 103%;
+}
+.heroSection .heroImage img {
+  width: 100%;
+}
+.heroSection .TextContent h1 {
+  font-size: 4rem;
+}
+.heroSection .TextContent p {
+  font-size: 1.4rem;
+  padding: 12px 0;
+  color: rgb(89, 80, 80);
+}
+/***** End Hero Section *****/
+.CallToaction {
+  padding: 12px 0;
+}
+.CallToaction button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.CallToaction button:nth-child(1) {
+  background-color: #ed017f;
+  border: solid 1px #ed017f;
+  color: white;
+}
+.CallToaction button:nth-child(2) {
+  background-color: white;
+  border: solid 1px #ed017f;
+  color: #ed017f;
+}
+/***** Social Section *****/
+.sociaLinks {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: -26%;
+  & span {
+    font-size: 1.2rem;
+    color: rgb(119, 112, 112);
+  }
+}
+
+/***** End Social Section *****/
+
+/***** MediaQuries *****/
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    background-color: #9d1c5c47;
+    backdrop-filter: blur(5px);
+    gap: 1rem;
+    width: 100%;
+    /* display: block; */
+    position: absolute;
+    transform: translate(-50%, -205%);
+    opacity: 1;
+    left: 52%;
+    top: 21%;
+    z-index: 111;
+    transition: all 1s;
+  }
+  header .logo {
+    border-bottom: #ed017f 1px solid;
+    text-align: center;
+  }
+  header nav {
+    width: 90%;
+    padding: 0 5rem;
+    text-align: center;
+  }
+  header .searchService ul {
+    padding: 16px;
+  }
+  header nav ul {
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    flex-direction: column;
+  }
+  header nav ul li a {
+    color: white;
+  }
+  .menu .open {
+    display: block;
+    z-index: 112;
+  }
+
+  .heroSection {
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: auto;
+    margin-top: 40px;
+    gap: 0.3rem;
+  }
+  .heroSection .TextContent {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    z-index: -100;
+    margin-top: 25px;
+  }
+  .sociaLinks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: -3%;
+    left: 5%;
+    gap: 0.4rem;
+    margin: auto;
+    padding: 18px;
+  }
+  .carbutton ul {
+    top: 7%;
+    left: 65%;
+  }
+  .CallToaction {
+    padding: 20px 0;
+  }
+}
+
+/***** End MediaQuries *****/

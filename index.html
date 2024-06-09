@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPDC</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- headerSection -->
+    <header>
+      <div class="logo">
+        <img src="./Assets/website-logo.png" alt="IPDC" />
+      </div>
+      <!-- navItem -->
+      <nav>
+        <ul>
+          <li><a href="#">retail</a></li>
+          <li><a href="#">sme</a></li>
+          <li><a href="#">corporate</a></li>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">covid 19</a></li>
+          <li><a href="#">campgains</a></li>
+        </ul>
+      </nav>
+      <!-- navItem ENd -->
+      <div class="searchService">
+        <ul>
+          <li><img src="./Assets/search-icon.png" alt="search" /></li>
+          <li><button>iSeacrh</button></li>
+        </ul>
+      </div>
+
+      <!-- menuItem -->
+
+      <!-- End Menu Item -->
+    </header>
+    <!-- end HeaderSection -->
+    <div class="menu">
+      <div class="close">
+        <span><i class="fa-solid fa-xmark"></i></span>
+      </div>
+      <div class="open">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </div>
+    </div>
+    <main>
+      <!-- Button -->
+      <div class="carbutton">
+        <ul>
+          <li><img src="./Assets/car.png" alt="" /></li>
+          <li>Car Loan</li>
+        </ul>
+      </div>
+      <div class="Homebutton">
+        <ul>
+          <li><img src="./Assets/House.png" alt="" /></li>
+          <li>Home Loan</li>
+        </ul>
+      </div>
+
+      <!-- Button -->
+      <!--  hero Section -->
+      <div class="heroSection">
+        <!-- leftConten -->
+        <div class="TextContent">
+          <h1>Chase Your Dream with us</h1>
+          <p>
+            The harder you work for something, the greater you'll feel when you
+            achieve it.
+          </p>
+          <div class="CallToaction">
+            <button>APPLY ONLINE</button>
+            <button>LOAN CALCULATOR</button>
+          </div>
+          <div class="sociaLinks">
+            <img src="./Assets/phone.png" alt="Phone" /> <span>1659 </span
+            ><b>|</b>
+            <img src="./Assets/facebook.png" alt="facebook" />
+            <img src="./Assets/youtube.png" alt="youtube" />
+            <img src="./Assets/linkedin.png" alt="linkedin" />
+            <img src="./Assets/instagram.png" alt="instagram" />
+          </div>
+        </div>
+
+        <!-- rightContent -->
+        <div class="heroImage">
+          <img src="./Assets/hero-image.png" alt="family Image" />
+        </div>
+      </div>
+    </main>
+    <!--  End hero Section -->
+  </body>
+  <script>
+    const menuOpen = document.querySelector(".open");
+    const close = document.querySelector(".close");
+    const header = document.querySelector("header");
+    menuOpen.addEventListener("click", OpenMenu);
+    close.addEventListener("click", CloseMenu);
+    function OpenMenu() {
+      header.style.transform = "translate(-50%, -50%)";
+      menuOpen.style.display = "none";
+      close.style.display = "block";
+    }
+    function CloseMenu() {
+      header.style.transform = "translate(-50%, -205%)";
+      menuOpen.style.display = "block";
+      close.style.display = "none";
+    }
+  </script>
+</html>
